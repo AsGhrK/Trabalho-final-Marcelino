@@ -1,0 +1,109 @@
+/* index.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0ff;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  .link {
+    font-size: 24px;
+  }
+  
+  .img {
+    align-items: center;
+    align-content: center;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff;
+    /* Cor do título */
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 5px;
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .produtos {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .produtos p {
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .produtos button {
+    padding: 5px 5px;
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    margin:auto;
+  }
+  
+  .produtos button:hover {
+    background-color: #c9302c;
+  }
+  
+  .produtos .button2 {
+    padding: 5px 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 25px;
+    display: flex;
+    margin:auto;
+  }
+  
+  .produtos .button2:hover {
+    background-color: #0056b3;
+  }
