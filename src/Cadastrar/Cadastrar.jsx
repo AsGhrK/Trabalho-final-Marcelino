@@ -24,7 +24,7 @@ export default function Cadastrar() {
     e.preventDefault();
     setLista([
       ...lista,
-      { videos, url, canal, id, discricao },
+      { video: videos, url: url, canal: canal, id: id, discricao: discricao },
     ]);
     setId(id + 1);
   };
@@ -85,7 +85,7 @@ export default function Cadastrar() {
               onChange={(e) => setDescricao(e.target.value)}
             />
           </div>
-          <br/>
+          <br />
           <button className="add-button">ADD</button>
         </form>
       </div>
@@ -94,12 +94,12 @@ export default function Cadastrar() {
           <div className="video-item" key={vid.id}>
             <p>
               Nome: {vid.videos}
-              <br/>
+              <br />
               Artista: {vid.artista}
-              <br/>
+              <br />
               Descrição: {showFullDescription[vid.id]
                 ? vid.discricao
-                : `${vid.discricao.slice(0, 50)}...`}<br/>
+                : `${vid.discricao.slice(0, 50)}...`}<br />
               {!showFullDescription[vid.id] ? (
                 <button
                   className="ver-mais-button"

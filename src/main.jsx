@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './Home'
+import Home from './Home/Home'
 import Cadastrar from './Cadastrar/Cadastrar'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
