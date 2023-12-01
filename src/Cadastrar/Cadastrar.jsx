@@ -9,7 +9,7 @@ export default function Cadastrar() {
   const localStorageList = JSON.parse(localStorage.getItem("Lista")) || [];
   const [videos, setVideo] = useState("");
   const [url, setUrl] = useState("");
-  const [artista, setArtista] = useState("");
+  const [canal, setCanal] = useState("");
   const [discricao, setDescricao] = useState("");
   const [lista, setLista] = useState(localStorageList);
   const [id, setId] = useState(
@@ -24,7 +24,7 @@ export default function Cadastrar() {
     e.preventDefault();
     setLista([
       ...lista,
-      { videos, url, artista, id, discricao },
+      { videos, url, canal, id, discricao },
     ]);
     setId(id + 1);
   };
@@ -68,12 +68,12 @@ export default function Cadastrar() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="artista">Artista:</label>
+            <label htmlFor="canal">Canal:</label>
             <input
               type="text"
-              id="artista"
-              value={artista}
-              onChange={(e) => setArtista(e.target.value)}
+              id="canal"
+              value={canal}
+              onChange={(e) => setCanal(e.target.value)}
             />
           </div>
           <div className="form-group">
