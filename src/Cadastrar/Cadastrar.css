@@ -1,7 +1,9 @@
-body{
+/* Definindo a cor de fundo para o corpo da página */
+body {
   background-color: #f8f9fa;
 }
 
+/* Estilos para o contêiner principal de cadastro */
 .cadastrar-container {
   display: flex;
   flex-direction: row;
@@ -12,6 +14,7 @@ body{
   height: 100%;
 }
 
+/* Estilos para o contêiner de conteúdo */
 .content-container {
   background-color: #ffffff;
   padding: 20px;
@@ -21,16 +24,19 @@ body{
   flex-grow: 1;
 }
 
+/* Estilos para o título */
 .title {
   color: #007bff;
   font-size: 28px;
   margin-bottom: 20px;
 }
 
+/* Estilos para o formulário */
 form {
   width: 100%;
 }
 
+/* Estilos para rótulos de input */
 label {
   display: block;
   font-size: 16px;
@@ -38,6 +44,7 @@ label {
   color: #333;
 }
 
+/* Estilos para input */
 input {
   width: 100%;
   padding: 12px;
@@ -46,6 +53,7 @@ input {
   border-radius: 8px;
 }
 
+/* Estilos para botões */
 .button {
   padding: 5px 10px;
   background-color: #007bff;
@@ -56,14 +64,17 @@ input {
   border-radius: 5px;
 }
 
+/* Efeito de hover para botões */
 .button:hover {
   background-color: #0056b3;
 }
 
+/* Estilos para links */
 .link {
   padding: 5px 10px;
 }
 
+/* Estilos para o contêiner de vídeos */
 .videos-container {
   width: 60%;
   display: flex;
@@ -72,6 +83,7 @@ input {
   margin-top: 20px;
 }
 
+/* Estilos para cada item de vídeo */
 .video-item {
   margin: 20px;
   padding: 20px;
@@ -82,7 +94,7 @@ input {
   background-color: #ffffff;
 }
 
-
+/* Estilos para o botão de remoção */
 .remove-button {
   padding: 5px 10px;
   background-color: #d9534f;
@@ -92,10 +104,12 @@ input {
   border-radius: 5px;
 }
 
+/* Efeito de hover para o botão de remoção */
 .remove-button:hover {
   background-color: #c9302c;
 }
 
+/* Estilos para botões de visualização e adição */
 .ver-mais-button, .view-button, .add-button {
   padding: 5px 10px;
   background-color: #007bff;
@@ -106,6 +120,7 @@ input {
   border-radius: 5px;
 }
 
+/* Efeito de hover para botões de visualização e adição */
 .ver-mais-button:hover, .view-button:hover, .add-button:hover {
   background-color: #0056b3;
 }

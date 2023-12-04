@@ -1,9 +1,53 @@
 .home-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 200px;
-    width: 100%;
-    height: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  padding: 100px;
+}
+
+/* Estilo para o container que contém os vídeos */
+.container {
+  margin-top: 20px;
+}
+
+/* Estilo para cada linha de vídeos */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilo para o componente Card */
+.item {
+  margin: 10px;
+}
+
+/* Estilo para o vídeo incorporado no Card */
+.col iframe {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Estilo para o nome do canal no Card */
+.col h6 , p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Adicione estas regras CSS ao seu arquivo Home.css existente */
+
+/* Estilo para o título principal da página */
+h1 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para a mensagem informativa abaixo do título */
+.message {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 20px;
+}

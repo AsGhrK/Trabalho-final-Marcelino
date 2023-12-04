@@ -1,11 +1,11 @@
-// Cadastrar.jsx
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../Componentes/NavBar";
+import RodaPe from "../Componentes/RodaPe";
 import "./Cadastrar.css";
 
 export default function Cadastrar() {
+  // State e useEffect para manipular a lista de vídeos no localStorage
   const localStorageList = JSON.parse(localStorage.getItem("Lista")) || [];
   const [videos, setVideo] = useState("");
   const [url, setUrl] = useState("");
@@ -20,20 +20,23 @@ export default function Cadastrar() {
     localStorage.setItem("Lista", JSON.stringify(lista));
   }, [lista]);
 
+  // Função para salvar um novo vídeo
   const salvar = (e) => {
     e.preventDefault();
     setLista([
       ...lista,
-      { video: videos, url: url, canal: canal, id: id, discricao: discricao },
+      { videos: videos, url: url, canal: canal, id: id, discricao: discricao },
     ]);
     setId(id + 1);
   };
 
+  // Função para remover um vídeo da lista
   const removeVideo = (id) => {
     const newLista = lista.filter((vid) => vid.id !== id);
     setLista(newLista);
   };
 
+  // State e função para controlar a exibição completa ou parcial da descrição
   const [showFullDescription, setShowFullDescription] = useState({});
 
   const toggleDescription = (id) => {
@@ -47,10 +50,11 @@ export default function Cadastrar() {
     <div className="cadastrar-container">
       <NavBar />
       <div className="content-container">
-        <h1 className="title">Lista de Produtos</h1>
+        <h1 className="title">Lista de Vídeos</h1>
         <form onSubmit={salvar} className="form">
+          {/* Formulário para adicionar um novo vídeo */}
           <div className="form-group">
-            <label htmlFor="videos">Nome do Video:</label>
+            <label htmlFor="videos">Nome do Vídeo:</label>
             <input
               type="text"
               id="videos"
@@ -77,10 +81,10 @@ export default function Cadastrar() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="discricao">Descrição:</label>
+            <label htmlFor="descricao">Descrição:</label>
             <input
               type="text"
-              id="discricao"
+              id="descricao"
               value={discricao}
               onChange={(e) => setDescricao(e.target.value)}
             />
@@ -89,17 +93,21 @@ export default function Cadastrar() {
           <button className="add-button">ADD</button>
         </form>
       </div>
+
+      {/* Lista de vídeos cadastrados */}
       <div className="videos-container">
         {lista.map((vid) => (
           <div className="video-item" key={vid.id}>
             <p>
               Nome: {vid.videos}
               <br />
-              Artista: {vid.artista}
+              Canal: {vid.canal}
               <br />
               Descrição: {showFullDescription[vid.id]
                 ? vid.discricao
-                : `${vid.discricao.slice(0, 50)}...`}<br />
+                : `${vid.discricao.slice(0, 50)}...`}
+              <br />
+              {/* Botão para mostrar/ocultar a descrição completa */}
               {!showFullDescription[vid.id] ? (
                 <button
                   className="ver-mais-button"
@@ -116,15 +124,17 @@ export default function Cadastrar() {
                 </button>
               )}
             </p>
+            {/* Vídeo incorporado do YouTube */}
             <iframe
               width="300"
               height="200"
               src={`https://www.youtube.com/embed/${vid.url.slice(17)}`}
-              title="Video"
+              title="Vídeo"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
+            {/* Links para detalhes do vídeo e botão para remover o vídeo */}
             <Link className="link" to={`/detalhe/${vid.id}`}>
               <button className="view-button">Ver</button>
             </Link>
@@ -137,6 +147,8 @@ export default function Cadastrar() {
           </div>
         ))}
       </div>
+      {/* Rodapé */}
+      <RodaPe />
     </div>
   );
 }
