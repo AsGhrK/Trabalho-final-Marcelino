@@ -7,7 +7,7 @@ export default function NavBar() {
             <nav className="navbar navbar-dark bg-dark fixed-top">
                 <div className="container-fluid">
                     {/* Link para a página inicial */}
-                    <a className="navbar-brand" href="Home"><i className="fi fi-rr-video-camera-alt"></i> Videos Net </a>
+                    <a className="navbar-brand" href="/"><i className="fi fi-rr-video-camera-alt"></i> Videos Net </a>
                     
                     {/* Botão de alternância para o menu lateral */}
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
