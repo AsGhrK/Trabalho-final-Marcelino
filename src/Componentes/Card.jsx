@@ -1,12 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Card.css";
 
 export default function Card({ vid }) {
     // Extrai o ID do vídeo da URL
     const videoId = vid.url.slice(17);
 
+    const linkStyle = {
+        color: 'black', // ou a cor desejada
+        textDecoration: 'none',
+    };
+
     return (
-        <div className='item'>
+        <Link to={`/detalhe/${vid.id}`} className='item' style={linkStyle}>
             <div className="col">
                 {/* Vídeo incorporado do YouTube */}
                 <iframe
@@ -22,6 +28,6 @@ export default function Card({ vid }) {
                 <h6>{vid.videos}</h6>
                 <p>{vid.canal}</p>
             </div>
-        </div>
+        </Link>
     );
 }
