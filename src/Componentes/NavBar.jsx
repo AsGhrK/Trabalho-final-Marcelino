@@ -33,7 +33,7 @@ export default function NavBar() {
                                 
                                 {/* Link para vídeos em alta */}
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="#"> <i className="fi fi-rr-flame" /> Em alta</a>
+                                    <a className="nav-link active" aria-current="page" href="EmAlta"> <i className="fi fi-rr-flame" /> Em alta</a>
                                 </li>
                                 
                                 {/* Link para a página de upload de vídeos */}
