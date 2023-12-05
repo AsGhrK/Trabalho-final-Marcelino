@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../Componentes/NavBar';
 import RodaPe from '../Componentes/RodaPe';
 import Card from '../Componentes/Card';
+import "./EmAlta.css"
 
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
     return (
         <div>
             {/* Container da página inicial */}
-            <div className="home-container">
+            <div className="emalta-container">
                 {/* Barra de navegação */}
                 <NavBar />
 
