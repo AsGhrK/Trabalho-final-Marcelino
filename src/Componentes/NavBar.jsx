@@ -28,7 +28,7 @@ export default function NavBar() {
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 {/* Link para a página principal */}
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="Home"> <i className="fi fi-rr-video-camera-alt" /> Videos</a>
+                                    <a className="nav-link active" aria-current="page" href="/"> <i className="fi fi-rr-video-camera-alt" /> Videos</a>
                                 </li>
                                 
                                 {/* Link para vídeos em alta */}
