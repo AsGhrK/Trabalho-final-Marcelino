@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
     return (
@@ -33,7 +34,7 @@ export default function NavBar() {
                                 
                                 {/* Link para vídeos em alta */}
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="EmAlta"> <i className="fi fi-rr-flame" /> Em alta</a>
+                                    <Link className="nav-link active" aria-current="page" to="/EmAlta"> <i className="fi fi-rr-flame" /> Em alta</Link>
                                 </li>
                                 
                                 {/* Link para a página de upload de vídeos */}
