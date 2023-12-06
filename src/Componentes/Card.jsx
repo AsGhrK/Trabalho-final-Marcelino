@@ -12,7 +12,7 @@ export default function Card({ vid }) {
     };
 
     return (
-        <a to={`/detalhe/${vid.id}`} className='item' style={linkStyle}>
+        <Link to={`/detalhe/${vid.id}`} className='item' style={linkStyle}>
             <div className="col">
                 {/* Vídeo incorporado do YouTube */}
                 <iframe
@@ -28,6 +28,6 @@ export default function Card({ vid }) {
                 <h6>{vid.videos}</h6>
                 <p>{vid.canal}</p>
             </div>
-        </a>
+        </Link>
     );
 }
