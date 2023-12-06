@@ -39,7 +39,7 @@ export default function NavBar() {
                                 
                                 {/* Link para a página de upload de vídeos */}
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="Cadastrar"> <i className="fi fi-rr-pencil" /> Subir Video</a>
+                                    <Link className="nav-link active" aria-current="page" to="/Cadastrar"> <i className="fi fi-rr-pencil" /> Subir Video</Link>
                                 </li>
                             </ul>
                         </div>
