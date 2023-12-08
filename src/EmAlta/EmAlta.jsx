@@ -27,7 +27,7 @@ export default function Home() {
                 <div className="container text-center">
                     <div className="row align-items-center">
                         {/* Mapeia e exibe cada vídeo usando o componente Card */}
-                        {videos.slice(-4).map((video, index) => (
+                        {videos.slice(-6).map((video, index) => (
                             <Card key={index} vid={video} />
                         ))}
                     </div>
