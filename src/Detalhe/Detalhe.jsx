@@ -26,6 +26,8 @@ export default function Detalhe() {
       <Card vid={video} />
       <div className="videos-container">
         <div className="video-item">
+          <h5>Data: {video.data}</h5>
+          <h6>Gênero: {video.genero}</h6>
           <p>
             Descrição: {showFullDescription
               ? video.discricao

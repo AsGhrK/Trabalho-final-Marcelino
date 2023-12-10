@@ -11,6 +11,8 @@ export default function Cadastrar() {
   const [url, setUrl] = useState("");
   const [canal, setCanal] = useState("");
   const [discricao, setDescricao] = useState("");
+  const [data, setData] = useState("");
+  const [genero, setGenero] = useState("");
   const [lista, setLista] = useState(localStorageList);
   const [id, setId] = useState(
     localStorageList[localStorageList.length - 1]?.id + 1 || 1
@@ -25,7 +27,7 @@ export default function Cadastrar() {
     e.preventDefault();
     setLista([
       ...lista,
-      { videos: videos, url: url, canal: canal, id: id, discricao: discricao },
+      { videos: videos, url: url, canal: canal, id: id, discricao: discricao, data: data, genero: genero },
     ]);
     setId(id + 1);
   };
@@ -81,6 +83,24 @@ export default function Cadastrar() {
             />
           </div>
           <div className="form-group">
+            <label htmlFor="canal">Data:</label>
+            <input
+              type="text"
+              id="data"
+              value={data}
+              onChange={(e) => setData(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="canal">Genero:</label>
+            <input
+              type="text"
+              id="genero"
+              value={genero}
+              onChange={(e) => setGenero(e.target.value)}
+            />
+          </div>
+          <div className="form-group">
             <label htmlFor="descricao">Descrição:</label>
             <input
               type="text"
@@ -102,6 +122,10 @@ export default function Cadastrar() {
               Nome: {vid.videos}
               <br />
               Canal: {vid.canal}
+              <br />
+              Data: {vid.data}
+              <br />
+              Gênero: {vid.genero}
               <br />
               Descrição: {showFullDescription[vid.id]
                 ? vid.discricao
