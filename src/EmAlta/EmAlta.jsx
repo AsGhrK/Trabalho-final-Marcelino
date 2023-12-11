@@ -5,7 +5,7 @@ import Card from '../Componentes/Card';
 import "./EmAlta.css"
 
 
-export default function Home() {
+export default function EmAlta() {
     // Recupera os vídeos do armazenamento local
     const videos = JSON.parse(localStorage.getItem('Lista')) || [];
     console.log(videos);
